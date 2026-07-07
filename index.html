@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Glam - Loja de Maquiagem</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#fff5f8;
+    color:#333;
+}
+
+header{
+    background:#d63384;
+    color:#fff;
+    padding:20px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:sticky;
+    top:0;
+}
+
+header h1{
+    font-size:30px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:20px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffd1e8;
+}
+
+.hero{
+    background:linear-gradient(rgba(214,51,132,.7),rgba(214,51,132,.7)),url("https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=1200&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+    text-align:center;
+    padding:120px 20px;
+}
+
+.hero h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+button{
+    background:white;
+    color:#d63384;
+    border:none;
+    padding:15px 35px;
+    font-size:18px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#f8d7e8;
+}
+
+.titulo{
+    text-align:center;
+    margin:50px 0 20px;
+    color:#d63384;
+    font-size:35px;
+}
+
+.produtos{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    padding:20px;
+}
+
+.card{
+    width:280px;
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.card h3{
+    margin:15px;
+}
+
+.card p{
+    margin:0 15px 15px;
+    color:#666;
+}
+
+.preco{
+    color:#d63384;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.card button{
+    margin:15px;
+    width:calc(100% - 30px);
+    background:#d63384;
+    color:white;
+}
+
+.sobre{
+    padding:60px 10%;
+    text-align:center;
+    background:white;
+}
+
+.sobre h2{
+    color:#d63384;
+    margin-bottom:20px;
+}
+
+.contato{
+    padding:60px 10%;
+    background:#ffe4ef;
+}
+
+.contato h2{
+    text-align:center;
+    color:#d63384;
+    margin-bottom:30px;
+}
+
+form{
+    max-width:500px;
+    margin:auto;
+}
+
+input, textarea{
+    width:100%;
+    padding:15px;
+    margin-bottom:15px;
+    border:none;
+    border-radius:10px;
+}
+
+textarea{
+    resize:none;
+    height:120px;
+}
+
+footer{
+    background:#d63384;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:15px;
+}
+
+.hero h2{
+font-size:35px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>💄 Beauty Glam</h1>
+
+<nav>
+<a href="#">Início</a>
+<a href="#produtos">Produtos</a>
+<a href="#sobre">Sobre</a>
+<a href="#contato">Contato</a>
+</nav>
+
+</header>
+
+<section class="hero">
+<h2>Realce sua Beleza</h2>
+<p>Os melhores produtos de maquiagem com qualidade e estilo.</p>
+<button>Comprar Agora</button>
+</section>
+
+<h2 class="titulo" id="produtos">Produtos em Destaque</h2>
+
+<section class="produtos">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1583241800698-e8ab01830f22?auto=format&fit=crop&w=600&q=80">
+<h3>Batom Matte</h3>
+<p>Longa duração e acabamento perfeito.</p>
+<p class="preco">R$ 39,90</p>
+<button onclick="comprar('Batom Matte')">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=600&q=80">
+<h3>Paleta de Sombras</h3>
+<p>Cores vibrantes para qualquer ocasião.</p>
+<p class="preco">R$ 89,90</p>
+<button onclick="comprar('Paleta de Sombras')">Comprar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80">
+<h3>Base Líquida</h3>
+<p>Cobertura uniforme e acabamento natural.</p>
+<p class="preco">R$ 69,90</p>
+<button onclick="comprar('Base Líquida')">Comprar</button>
+</div>
+
+</section>
+
+<section class="sobre" id="sobre">
+<h2>Sobre Nós</h2>
+<p>
+A Beauty Glam oferece maquiagens modernas, de alta qualidade e com preços acessíveis.
+Nossa missão é valorizar a beleza de cada pessoa com produtos incríveis.
+</p>
+</section>
+
+<section class="contato" id="contato">
+
+<h2>Entre em Contato</h2>
+
+<form>
+
+<input type="text" placeholder="Seu Nome" required>
+
+<input type="email" placeholder="Seu E-mail" required>
+
+<textarea placeholder="Digite sua mensagem"></textarea>
+
+<button type="submit">Enviar</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<p>© 2026 Beauty Glam - Todos os direitos reservados.</p>
+
+</footer>
+
+<script>
+function comprar(produto){
+    alert("Você escolheu: " + produto + "\\nObrigado pela preferência!");
+}
+</script>
+
+</body>
+</html>
